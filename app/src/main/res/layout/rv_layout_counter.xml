@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_layout_counter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_countWhat"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_rectangle"
+        android:ems="10"
+        android:hint="Count what?"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/et_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="85dp"
+        android:background="@drawable/rounded_rectangle"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/Zero"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_countWhat"
+        app:layout_constraintTop_toTopOf="@+id/et_countWhat" />
+
+    <ImageButton
+        android:id="@+id/btn_img_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toStartOf="@+id/et_number"
+        app:layout_constraintTop_toTopOf="@+id/et_number"
+        app:srcCompat="@drawable/baseline_keyboard_double_arrow_down_24"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btn_img_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintStart_toEndOf="@+id/et_number"
+        app:layout_constraintTop_toTopOf="@+id/et_number"
+        app:srcCompat="@drawable/baseline_keyboard_double_arrow_up_24"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/btn_img_delete"
+        android:layout_width="35dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_button_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_img_up"
+        app:layout_constraintTop_toTopOf="@+id/et_number"
+        app:srcCompat="@drawable/baseline_delete_24"
+        app:tint="@color/silver" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
